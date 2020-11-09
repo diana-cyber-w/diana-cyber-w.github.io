@@ -1,0 +1,89 @@
+body{
+	background-color: whitesmoke;
+	font-family: 'Gabriela', serif;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+}
+.d1, 
+.d11{
+	font-family: 'Marck Script', cursive;
+	writing-mode: vertical-lr;
+	white-space: nowrap;
+	opacity: 60%;
+	display: inline-block;
+	position: absolute;
+	width: 10%;
+	text-align: left;
+	padding: 40px;
+	background-color: #ad2ee8;
+	font-weight: bold;
+	font-size: 90px;
+	animation: move 5s ease-out;
+}
+.d1:hover{
+transform: skew(30deg, -30deg);
+}
+.d11:hover{
+	transform: scaleX(-1);
+}
+.d1{
+	left: 30%;
+}
+.d11{
+	right: 5%;
+}
+.d3{
+	width: 50%;
+}
+img{
+	object-fit: cover;
+}
+@keyframes move {
+	from {font-size: 10px;}
+	to{font-size: 90px;}
+}
+@media all and (max-width: 1300px){
+	.d1, .d11{
+		font-size: 50px;
+		width: 5%;
+	}
+	@keyframes move {
+		from {font-size: 10px;}
+		to{font-size: 50px;}
+	}
+}
+@media all and (max-width: 900px){
+	.d1, .d11{
+		font-size: 30px;
+		width: 5%;
+	}
+	@keyframes move {
+		from {font-size: 10px;}
+		to{font-size: 30px;}
+	}
+	}
+@media all and (max-width: 600px){
+	body{
+		flex-direction: column;
+	}
+	.d1{
+	left: 60%;
+	font-size: 20px;
+	top: 0;
+	width: 5%;
+	}
+	.d11{
+		font-size: 20px;
+		bottom: -7%;
+		width: 5%;
+		right: 20%;
+	}
+.d3{
+	margin: auto;
+}
+@keyframes move {
+	from {font-size: 10px;}
+	to{font-size: 20px;}
+}
+}
