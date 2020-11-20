@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>Задание</title>
+	<link href="style.css" rel="stylesheet">
+	<meta http-equiv="content-type" ; content="text/html" ; charset="UTF-8" />
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<button onclick="func()">Нажми меня</button>
+	<a href="https://habr.com/ru/post/467049/" onclick="pre()">Flexbox</a>
+	<button id="elem" onclick="alert('Клик!');">Автоклик</button>
+	<p id="drop">
+		<label>Имя</label>
+		<input type="text">
+	</p>
+	<p>
+		<input type="submit" value="Ввести свое имя" id="hider">
+	</p>
+	<script>
+		var hello = 'Привет, ';
+		console.log(hello.concat('Кевин', ', удачного дня.'));
+		function func() {
+			let newq = window.open("", "example", "width =600, height=600");
+			newq.focus;
+			newq.document.open();
+			newq.document.write("<h1>Hello</h1>");
+			newq.document.write("<input type = 'button' value='Close' onclick='window.close();'>")
+			newq.document.close();
+		}
+		function pre() {
+			alert("Аккуратно!");
+		}
+		document.getElementById('drop').hidden = true;
+		document.getElementById('hider').onclick = function () {
+			document.getElementById('drop').hidden = false;
+		}
+		var hello = 'Доброе утро, ';
+		console.log(hello.concat('Дмитрий Витальевич', ', удачного дня.'));
+	</script>
+</body>
+
+</html>

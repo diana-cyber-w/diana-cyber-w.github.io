@@ -1,0 +1,16 @@
+body{
+	font-family: 'Gabriela', serif;
+	/*display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;*/
+}
+ @media all and (max-width: 1200px){
+	
+}
+@media all and (max-width: 900px){
+	
+	}
+@media all and (max-width: 600px){
+
+}
+
