@@ -1,0 +1,160 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>Задание</title>
+	<link href="style.css" rel="stylesheet">
+	<meta http-equiv="content-type" ; content="text/html" ; charset="UTF-8" />
+	<link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body onload="startTime()">
+	Время: <b><span id="time"></span></b><br>
+	<input type="button" value="Массив" onclick="ve()"><br>
+	<input type="button" value="Найти минимальное" onclick="vre()"><br>
+	<input type="button" value="Найти степень" onclick="pow()"><br>
+	<input type="button" value="Информация о браузере" onclick="vve()">
+	<div id='name'></div>
+	<div id='version'></div>
+	<script type="text/javascript">
+		function pow(x, n) {
+			var x = prompt('Введите число ');
+			var n = prompt('Введите степень ');
+			alert('Результат равен ' + Math.pow(x, n));
+		}
+		function vre() {
+			var a, b;
+			a = prompt('Введите 1-ое число ');
+			b = prompt('Введите 2-ое число ');
+			alert('Минимальное из введенных чисел равно ' + Math.min(a, b));
+		}
+		function ve() {
+			var mas = [],
+				masElem,
+				i,
+				i_plus = 1;
+			for (i = 0; i <= 2; i += 1) {
+				masElem = prompt('Введите ' + i_plus + ' элемент масива');
+				mas.push(masElem);
+				i_plus += 1;
+			}
+			alert(mas);
+		}
+		setTimeout(qw, 60000);
+		function qw() {
+			alert("Поставьте 100 баллов (ง ื▿ ื)ว");
+		}
+		function startTime() {
+			var date = new Date();
+			var hours = date.getHours();
+			var minutes = date.getMinutes();
+			var seconds = date.getSeconds();
+			if (hours < 10) hours = "0" + hours;
+			if (minutes < 10) minutes = "0" + minutes;
+			if (seconds < 10) seconds = "0" + seconds;
+			document.getElementById("time").innerHTML = hours + ":" + minutes + ":" + seconds;
+			setTimeout(startTime, 1000);
+		}
+		function vve() {
+			var BrowserDetect = {
+				init: function () {
+					this.browser = this.searchString(this.dataBrowser) || "An unknown browser";
+					this.version = this.searchVersion(navigator.userAgent) || this.searchVersion(navigator.appVersion) || "an unknown version";
+				},
+				searchString: function (data) {
+					for (var i = 0; i < data.length; i++) {
+						var dataString = data[i].string;
+						var dataProp = data[i].prop;
+						this.versionSearchString = data[i].versionSearch || data[i].identity;
+						if (dataString) {
+							if (dataString.indexOf(data[i].subString) != -1)
+								return data[i].identity;
+						}
+						else if (dataProp)
+							return data[i].identity;
+					}
+				},
+				searchVersion: function (dataString) {
+					var index = dataString.indexOf(this.versionSearchString);
+					if (index == -1) return;
+					return parseFloat(dataString.substring(index + this.versionSearchString.length + 1));
+				},
+				dataBrowser: [
+					{
+						string: navigator.userAgent,
+						subString: "Chrome",
+						identity: "Chrome"
+					},
+					{
+						string: navigator.userAgent,
+						subString: "OmniWeb",
+						versionSearch: "OmniWeb/",
+						identity: "OmniWeb"
+					},
+					{
+						string: navigator.vendor,
+						subString: "Apple",
+						identity: "Safari",
+						versionSearch: "Version"
+					},
+					{
+						prop: window.opera,
+						identity: "Opera",
+						versionSearch: "Version"
+					},
+					{
+						string: navigator.vendor,
+						subString: "iCab",
+						identity: "iCab"
+					},
+					{
+						string: navigator.vendor,
+						subString: "KDE",
+						identity: "Konqueror"
+					},
+					{
+						string: navigator.userAgent,
+						subString: "Firefox",
+						identity: "Firefox"
+					},
+					{
+						string: navigator.vendor,
+						subString: "Camino",
+						identity: "Camino"
+					},
+					{
+						/* For Newer Netscapes (6+) */
+						string: navigator.userAgent,
+						subString: "Netscape",
+						identity: "Netscape"
+					},
+					{
+						string: navigator.userAgent,
+						subString: "MSIE",
+						identity: "Internet Explorer",
+						versionSearch: "MSIE"
+					},
+					{
+						string: navigator.userAgent,
+						subString: "Gecko",
+						identity: "Mozilla",
+						versionSearch: "rv"
+					},
+					{
+						/* For Older Netscapes (4-) */
+						string: navigator.userAgent,
+						subString: "Mozilla",
+						identity: "Netscape",
+						versionSearch: "Mozilla"
+					}
+				],
+			};
+			BrowserDetect.init();
+
+			document.getElementById("name").innerHTML = BrowserDetect.browser;
+			document.getElementById("version").innerHTML = BrowserDetect.version;
+		}
+	</script>
+</body>
+
+</html>
