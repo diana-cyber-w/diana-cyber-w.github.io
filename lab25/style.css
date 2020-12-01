@@ -1,0 +1,75 @@
+body{
+	font-family: 'Gabriela', serif;
+	background-color: #bd9cd6;
+	text-align: center;
+	font-family: 'Balsamiq Sans', cursive;
+	color: #9656c7;
+	/*display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;*/
+}
+.ded{
+	font-size: 100px;
+	font-family: 'Russo One', sans-serif;
+	margin: auto;
+}
+.c1{
+	font-size: 30px;
+}
+.container{
+	font-size: 20px;
+	justify-content: center;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+}
+.d{
+width: 24%;
+border: 3px solid #660fa8;
+color: #660fa8;
+}
+.iv1{
+	background-color: #660fa8;
+	color: #bd9cd6;
+}
+#name, #version{
+	font-size: 50px;
+}
+.ml{
+	font-size: small;
+}
+input{
+	text-decoration: none;
+  outline: none;
+  display: inline-block;
+  width: auto;
+  height: 45px;
+  line-height: 45px;
+  border-radius: 45px;
+  margin: 10px 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 3px;
+  font-weight: 600;
+  color: #bd9cd6;
+  background: white;
+  box-shadow: 0 8px 15px rgba(0,0,0,.1);
+  transition: .3s;
+}
+input:hover{
+	background: #9359f0;
+  box-shadow: 0 15px 20px #9359f0;
+  transform: translateY(-7px);
+}
+ @media all and (max-width: 1200px){
+	
+}
+@media all and (max-width: 900px){
+	
+	}
+@media all and (max-width: 600px){
+
+}
+

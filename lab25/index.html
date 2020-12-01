@@ -1,0 +1,257 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>Задание</title>
+	<link href="style.css" rel="stylesheet">
+	<meta http-equiv="content-type" ; content="text/html" ; charset="UTF-8" />
+	<link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<p class="ded" onclick="javascript:window.alert('ОСТОРОЖНО! ТЫ РАЗБУДИЛ ДЕДА.')">ДЕД-БИНГО
+	</p>
+	<div class="container">
+		<div class="d iv1" id="q" onclick="io()">всё<br>слишком<br>громкое/<br>тихое</div>
+		<div class="d" id="q1" onclick="io1()">гуглишь<br>неведомое<br>слово</div>
+		<div class="d iv1" id="q2" onclick="io2()">хочешь<br>на дачу</div>
+		<div class="d" id="q3" onclick="io3()">все болит</div>
+		<div class="d" id="q4" onclick="io4()">грустишь, когда<br>тебе долго<br>не пишут/<br>не звонят</div>
+		<div class="d iv1" id="q5" onclick="io5()">долго<br>доходят<br>шутки</div>
+		<div class="d" id="q6" onclick="io6()">кряхтишь, когда<br>что-то<br>делаешь</div>
+		<div class="d iv1" id="q7" onclick="io7()">тебя легко<br>испугать</div>
+		<div class="d iv1" id="q8" onclick="io8()">часто<br>забываешь<br>людей и их<br>имена</div>
+		<div class="d" id="q9" onclick="io9()">ничего не<br>нравится</div>
+		<div class="d iv1" id="q10" onclick="io10()">тусить несколько<br>дней подряд<br>=<br>самоубийство</div>
+		<div class="d" id="q11" onclick="io11()">тревожно<br>рассматриваешь<br>новые<br>родинки</div>
+		<div class="d" id="q12" onclick="io12()">можешь<br>сцепиться с<br>кем-то по<br>пьяни</div>
+		<div class="d iv1" id="q13" onclick="io13()">не<br>прихотлив в<br>еде</div>
+		<div class="d" id="q14" onclick="io14()">бывают<br>болезненные<br>флешбеки</div>
+		<div class="d iv1" id="q15" onclick="io15()">любишь<br>говорить по<br>телефону</div>
+	</div>
+	<p class="ml">*Перед просмотром результатов, посчитайте количесвто БИНГО.</p>
+	<input type="button" value="Результаты" onclick="rez()"><br>
+	<input type="button" value="Информация о браузере" onclick="vve()"><br>
+	<form name="c1" class="c1">
+		Текущее время:
+		<input name="f1" size="8">
+		<input type="button" value="Начать" onclick="if(idp1 == null) startX();">
+		<input type="button" value="Остановить" onclick="if(idp1 !=null) stop();">
+	</form>
+	<div id='name'></div>
+	<div id='version'></div>
+	<script type="text/javascript">
+		var idp1 = null;
+		function startX() {
+			d = new Date();
+			window.document.c1.f1.value = d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
+			idp1 = setTimeout("startX();", 500);
+		}
+		function stop() {
+			clearTimeout(idp1);
+			idp1 = null;
+		}
+		function rez() {
+			var name = window.prompt('Введите свое имя');
+			if (window.confirm(name + ', у вас больше 8 БИНГО?') == true) {
+				if (window.confirm(name + ', у вас больше 12 БИНГО?') == true) {
+					alert('ТЫ - ТИПИЧНЫЙ ДЕД. ВЗБОДРИТЬСЯ БЫ ТЕБЕ! ФЛЕКСУ НАВЕСТИ, А ТО И КУРАЖНУТЬ.')
+				}
+				else {
+					alert('МОЛОДОСТЬ УШЛА, ВСЕ КАК-ТО ПОМЕРКЛО, А ЖИЗНЬ, БЫВАЕТ, ГОРЧИТ.')
+				}
+			}
+			else {
+				if (window.confirm(name + ', у вас больше 4 БИНГО?') == true) {
+					alert('ДА, СПИНА ПОБАЛИВАЕТ, НО ЗАТО СКОЛЬКО ДЕЛЬНЫХ И ОСТРОУМНЫХ МЫСЛЕЙ У ТЕБЯ В ГОЛОВЕ!');
+				}
+				else {
+					alert('НИ НАМЕКА НА ДРЯХЛОСТЬ - ТОЛЬКО БЛАГОРОДНАЯ СЕДИНА И ПЫЛКИЙ ВЗГЛЯД СКВОЗЬ ЛЕГКИЕ МОРЩИНКИ!')
+				}
+			}
+		}
+		function io() {
+			document.getElementById('q').innerHTML = 'БИНГО';
+			var a = document.getElementById('q');
+			a.style.color = "#e01d85";
+		}
+		function io1() {
+			document.getElementById('q1').innerHTML = 'БИНГО';
+			var a = document.getElementById('q1');
+			a.style.color = "#e01d85";
+		}
+		function io2() {
+			document.getElementById('q2').innerHTML = 'БИНГО';
+			var a = document.getElementById('q2');
+			a.style.color = "#e01d85";
+		}
+		function io3() {
+			document.getElementById('q3').innerHTML = 'БИНГО';
+			var a = document.getElementById('q3');
+			a.style.color = "#e01d85";
+		}
+		function io4() {
+			document.getElementById('q4').innerHTML = 'БИНГО';
+			var a = document.getElementById('q4');
+			a.style.color = "#e01d85";
+		}
+		function io5() {
+			document.getElementById('q5').innerHTML = 'БИНГО';
+			var a = document.getElementById('q5');
+			a.style.color = "#e01d85";
+		}
+		function io6() {
+			document.getElementById('q6').innerHTML = 'БИНГО';
+			var a = document.getElementById('q6');
+			a.style.color = "#e01d85";
+		}
+		function io7() {
+			document.getElementById('q7').innerHTML = 'БИНГО';
+			var a = document.getElementById('q7');
+			a.style.color = "#e01d85";
+		}
+		function io8() {
+			document.getElementById('q8').innerHTML = 'БИНГО';
+			var a = document.getElementById('q8');
+			a.style.color = "#e01d85";
+		}
+		function io9() {
+			document.getElementById('q9').innerHTML = 'БИНГО';
+			var a = document.getElementById('q9');
+			a.style.color = "#e01d85";
+		}
+		function io10() {
+			document.getElementById('q10').innerHTML = 'БИНГО';
+			var a = document.getElementById('q10');
+			a.style.color = "#e01d85";
+		}
+		function io11() {
+			document.getElementById('q11').innerHTML = 'БИНГО';
+			var a = document.getElementById('q11');
+			a.style.color = "#e01d85";
+		}
+		function io12() {
+			document.getElementById('q12').innerHTML = 'БИНГО';
+			var a = document.getElementById('q12');
+			a.style.color = "#e01d85";
+		}
+		function io13() {
+			document.getElementById('q13').innerHTML = 'БИНГО';
+			var a = document.getElementById('q13');
+			a.style.color = "#e01d85";
+		}
+		function io14() {
+			document.getElementById('q14').innerHTML = 'БИНГО';
+			var a = document.getElementById('q14');
+			a.style.color = "#e01d85";
+		}
+		function io15() {
+			document.getElementById('q15').innerHTML = 'БИНГО';
+			var a = document.getElementById('q15');
+			a.style.color = "#e01d85";
+		}
+		function vve() {
+			var BrowserDetect = {
+				init: function () {
+					this.browser = this.searchString(this.dataBrowser) || "An unknown browser";
+					this.version = this.searchVersion(navigator.userAgent) || this.searchVersion(navigator.appVersion) || "an unknown version";
+				},
+				searchString: function (data) {
+					for (var i = 0; i < data.length; i++) {
+						var dataString = data[i].string;
+						var dataProp = data[i].prop;
+						this.versionSearchString = data[i].versionSearch || data[i].identity;
+						if (dataString) {
+							if (dataString.indexOf(data[i].subString) != -1)
+								return data[i].identity;
+						}
+						else if (dataProp)
+							return data[i].identity;
+					}
+				},
+				searchVersion: function (dataString) {
+					var index = dataString.indexOf(this.versionSearchString);
+					if (index == -1) return;
+					return parseFloat(dataString.substring(index + this.versionSearchString.length + 1));
+				},
+				dataBrowser: [
+					{
+						string: navigator.userAgent,
+						subString: "Chrome",
+						identity: "Chrome"
+					},
+					{
+						string: navigator.userAgent,
+						subString: "OmniWeb",
+						versionSearch: "OmniWeb/",
+						identity: "OmniWeb"
+					},
+					{
+						string: navigator.vendor,
+						subString: "Apple",
+						identity: "Safari",
+						versionSearch: "Version"
+					},
+					{
+						prop: window.opera,
+						identity: "Opera",
+						versionSearch: "Version"
+					},
+					{
+						string: navigator.vendor,
+						subString: "iCab",
+						identity: "iCab"
+					},
+					{
+						string: navigator.vendor,
+						subString: "KDE",
+						identity: "Konqueror"
+					},
+					{
+						string: navigator.userAgent,
+						subString: "Firefox",
+						identity: "Firefox"
+					},
+					{
+						string: navigator.vendor,
+						subString: "Camino",
+						identity: "Camino"
+					},
+					{
+						/* For Newer Netscapes (6+) */
+						string: navigator.userAgent,
+						subString: "Netscape",
+						identity: "Netscape"
+					},
+					{
+						string: navigator.userAgent,
+						subString: "MSIE",
+						identity: "Internet Explorer",
+						versionSearch: "MSIE"
+					},
+					{
+						string: navigator.userAgent,
+						subString: "Gecko",
+						identity: "Mozilla",
+						versionSearch: "rv"
+					},
+					{
+						/* For Older Netscapes (4-) */
+						string: navigator.userAgent,
+						subString: "Mozilla",
+						identity: "Netscape",
+						versionSearch: "Mozilla"
+					}
+				],
+			};
+			BrowserDetect.init();
+
+			document.getElementById("name").innerHTML = BrowserDetect.browser;
+			document.getElementById("version").innerHTML = BrowserDetect.version;
+		}
+	</script>
+</body>
+
+</html>
