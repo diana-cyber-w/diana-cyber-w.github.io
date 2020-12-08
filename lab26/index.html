@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<title>Задание</title>
+	<link href="style.css" rel="stylesheet">
+	<meta http-equiv="content-type" ; content="text/html" ; charset="UTF-8" />
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+</head>
+
+<body onload="movie();">
+	<div id="img-bg">
+		<img src="">
+	</div>
+	<div id="img-bg1">
+
+		<img src="">
+		<div class="bus" id="bus">Сессия – вот чем нужно пугать детей в детстве, а не всякими там бабаями!</div>
+		<ul class="menu">
+			<li><a href="#">Ожидание</a>
+				<ul class="submenu">
+					<li><a href="#">ВД: 10</a></li>
+					<li><a href="#">ЭО: 10</a></li>
+					<li><a href="#">ВМ: 10</a></li>
+					<li><a href="#">ДМ: 10</a></li>
+					<li><a href="#">ТССА: 10</a></li>
+				</ul>
+			</li>
+			<li><a href="#">Реальность</a>
+				<ul class="submenu">
+					<li><a href="#">ВД: 9</a></li>
+					<li><a href="#">ЭО: 9</a></li>
+					<li><a href="#">ВМ: 9</a></li>
+					<li><a href="#">ДМ: 9</a></li>
+					<li><a href="#">ТССА: 9</a></li>
+				</ul>
+			</li>
+		</ul>
+		<input type="button" value="Начать/Остановить"
+			onclick="if(flag1==0){ id1=setTimeout('movie();',5000); flag1=1;} else { clearTimeout(id1); flag1=0;}">
+	</div>
+	<script type="text/javascript">
+		var i = 0;
+		var flag1;
+		var id1;
+		function movie() {
+			eval("document.images[1].src='im0" + i + ".jpg';");
+			eval("document.images[0].src='im0" + i + ".jpg';");
+			if (i == 1) document.getElementById("bus").innerHTML = 'Готовлюсь к зачетам. Точнее, хочу готовиться. А еще точнее, хочу начать готовиться. Готовлюсь готовиться, в общем.';
+			if (i == 2) document.getElementById("bus").innerHTML = 'Пытаясь готовиться к экзамену, каждый раз с удивлением обнаруживаю, что лекции в моей тетрадке записывал какой-то врач. Пьяный. Левой рукой. На бегу.';
+			if (i == 3) document.getElementById("bus").innerHTML = 'Ненавижу сессию за то, что заниматься обычными делами не позволяет совесть, а заниматься учебой не позволяет лень.';
+			i++;
+			if (i > 3) i = 0;
+			id1 = setTimeout("movie();", 5000);
+		}
+	</script>
+
+</body>
+
+</html>
