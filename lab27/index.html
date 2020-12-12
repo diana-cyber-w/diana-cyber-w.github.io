@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<title>Задание</title>
+	<link href="style.css" rel="stylesheet">
+	<meta http-equiv="content-type" ; content="text/html" ; charset="UTF-8" />
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<div id="img-bg">
+		<a href="javascript: ichange(); void(0);"><img src="1.jpg" name="i1"></a>
+	</div>
+	<div id="img-bg1">
+		<p>INTERSTELLAR</p>
+		<div class="planet">
+			<a href="https://www.kinopoisk.ru/film/258687/cast/" target="_blank"><img src="p4.png" width="15%" class="p p1"
+					onmouseover="this.src='pl2.png'" onmouseout="this.src='p4.png'"></a>
+			<a href="content.html" target="_blank"><img src="p3.png" width="15%" class="p p2"
+					onmouseover="this.src='pl1.png'" onmouseout="this.src='p3.png'"></a>
+			<a href="https://www.ivi.ru/watch/112372" target="_blank"><img src="p2.png" width="15%" class="p p3"
+					onmouseover="this.src='pl3.png'" onmouseout="this.src='p4.png'"></a>
+			<a href="https://www.kinopoisk.ru/film/258687/reviews/" target="_blank"><img src="p1.png" width="15%"
+					class="p p4" onmouseover="this.src='pl4.png'" onmouseout="this.src='p1.png'"></a>
+
+		</div>
+
+	</div>
+	<script type="text/javascript">
+		var flag = 0;
+		function ichange() {
+			if (flag == 0) {
+				document.i1.src = "1.jpg";
+				flag = 1;
+			}
+			else if (flag == 1) {
+				document.i1.src = "2.jpg";
+				flag = 2;
+			}
+			else {
+				document.i1.src = "3.jpg";
+				flag = 0;
+			}
+		}
+	</script>
+
+</body>
+
+</html>
