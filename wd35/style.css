@@ -1,0 +1,53 @@
+body {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	align-self: stretch;
+	flex-grow: 1;
+	text-align: center;
+	background-color: #f7c3b7;
+}
+
+.glav {
+	width: 100%;
+	font-size: 6vw;
+}
+
+.forma {
+	border: 5px solid #7f3b4f;
+	width: 30%;
+	margin: 1%;
+	background-image: url("fon.jpg");
+}
+
+.foto {
+	display: inline-block;
+	width: 50%;
+	padding: 5%;
+	margin: 5%;
+	border: 5px solid #7f3b4f;
+	text-align: center;
+}
+
+.laik {
+	display: inline-block;
+	width: 50%;
+	padding: 1%;
+	margin: 5%;
+	border: 5px solid #7f3b4f;
+	font-family: 'Caveat', cursive;
+	font-size: 4vw;
+}
+
+.i1 {
+	transition: 1s;
+}
+
+.i1:hover {
+	transform: scale(1.2);
+}
+
+.name {
+	font-family: 'Caveat', cursive;
+	font-size: 5vw;
+}
