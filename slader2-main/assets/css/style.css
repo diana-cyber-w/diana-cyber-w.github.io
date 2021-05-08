@@ -405,12 +405,6 @@ header {
 
 input[type="radio"] {
 	-webkit-appearance: radio;
-	-ms-transform: scale(2); /* IE 9 */
-	-webkit-transform: scale(2); /* Chrome, Safari, Opera */
-	transform: scale(2);
-	margin-right: 10px;
-	-moz-transform: scale(2);
-	-o-transform: scale(2);
 
 
 }
@@ -420,10 +414,16 @@ flex-direction:column;
 justify-content: space-between;
 font-size: 30px;
 }
-.answer_input{
-	display:flex;
+.answer_input {
+	display: flex;
 	align-items: center;
-	margin-bottom:10px;
+	margin-bottom: 10px;
+	-ms-transform: scale(2); /* IE 9 */
+	-webkit-transform: scale(2); /* Chrome, Safari, Opera */
+	transform: scale(2);
+	margin-right: 10px;
+	-moz-transform: scale(2);
+	-o-transform: scale(2);
 }
 .question{
 	display:flex;
