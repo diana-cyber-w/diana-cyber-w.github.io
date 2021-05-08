@@ -406,7 +406,7 @@ header {
 input[type="radio"] {
 	-webkit-appearance: radio;
 	-ms-transform: scale(2); /* IE 9 */
-	/*-webkit-transform: scale(2); /* Chrome, Safari, Opera */
+	-webkit-transform: scale(2); /* Chrome, Safari, Opera */
 	transform: scale(2);
 	margin-right: 10px;
 	-moz-transform: scale(2);
